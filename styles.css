@@ -109,19 +109,16 @@ footer {
     border-top: 4px solid #20a39e;
 
 }
+
 /* Homework 3 - Responsive Layout */
 
-/* Keep boxes inside the screen */
 * {
     box-sizing: border-box;
 }
 
-/* Desktop layout */
+/* Desktop: two columns */
 main {
     max-width: 1100px;
-}
-
-.layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -132,18 +129,15 @@ section {
     min-width: 0;
 }
 
-/* About Me goes across both columns */
+/* About Me uses both columns */
 #about {
     grid-column: 1 / 3;
 }
 
-/* Tablet layout */
+/* Tablet */
 @media (max-width: 900px) {
     main {
         max-width: 750px;
-    }
-
-    .layout {
         gap: 10px;
     }
 
@@ -156,27 +150,15 @@ section {
     }
 }
 
-/* Mobile layout */
+/* Mobile */
 @media (max-width: 600px) {
-    .layout {
+    main {
         grid-template-columns: 1fr;
+        padding: 10px;
     }
 
     #about {
         grid-column: auto;
-    }
-
-    main {
-        margin: 10px auto;
-        padding: 10px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    .site-header {
-        padding: 20px;
     }
 
     nav li {
@@ -184,9 +166,12 @@ section {
         margin: 10px 0;
     }
 
+    .site-header {
+        padding: 20px;
+    }
+
     img {
         max-width: 100%;
         height: auto;
     }
 }
-
